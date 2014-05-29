@@ -10,6 +10,6 @@ Gem::Specification.new do |s|
   s.files       += Dir.glob('lib/**/*.rb')
   s.files       += Dir.glob('spec/**/*')
   s.test_files  = Dir.glob('tests/**/*')
-  s.homepage    = 'http://rubygems.org/gems/trilateration'
+  s.homepage    = 'https://github.com/patrickread/trilateration'
   s.license     = 'MIT'
 end
