@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "Trilateration calculates the position of an unknown point, using the distance from three known points to it."
   s.authors     = ["Patrick Read"]
   s.email       = 'pread13@gmail.com'
-  s.files       = %w(README.md trilateration.gemspec)
+  s.files       = %w(LICENSE README.md trilateration.gemspec)
   s.files       += Dir.glob('lib/**/*.rb')
   s.files       += Dir.glob('spec/**/*')
   s.test_files  = Dir.glob('tests/**/*')
