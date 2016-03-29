@@ -1,18 +1,17 @@
-#!/usr/bin/env ruby
-
-require "minitest/autorun"
-require_relative '../lib/trilateration.rb'
-require_relative '../lib/point.rb'
+require 'minitest_helper'
 
 class TrilaterationTest < Minitest::Test
+  def test_that_it_has_a_version_number
+    refute_nil ::Trilateration::VERSION
+  end
 
   def test_trilateration
-    p1 = Point.new(1,2)
-    p2 = Point.new(8,6)
-    p3 = Point.new(1,6)
-    tri = Trilateration.new(p1, p2, p3)
+    p1 = ::Trilateration::Point.new(1,2)
+    p2 = ::Trilateration::Point.new(8,6)
+    p3 = ::Trilateration::Point.new(1,6)
+    tri = ::Trilateration::Calculate.new(p1, p2, p3)
 
-    test_output = tri.calculate_from_test_point(Point.new(4.25, 4.15, 1))
+    test_output = tri.calculate_from_test_point(Trilateration::Point.new(4.25, 4.15, 1))
     output = tri.calculate_from_distances(4.02305854, 4.43677811, 3.87104637)
 
     assert_equal(test_output.x_rounded, output.x_rounded, "X Coordinate is not correct")

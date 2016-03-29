@@ -1,3 +1,5 @@
+require 'trilateration/point'
+
 module Trilateration
   class Calculate
     attr_accessor :point1, :point2, :point3, :rel_point1, :rel_point2, :rel_point3
