@@ -6,10 +6,10 @@ require 'trilateration/version'
 Gem::Specification.new do |spec|
   spec.name          = 'trilateration'
   spec.version       = Trilateration::VERSION
-  spec.authors       = ["Patrick Read", "Tim Gentry"]
+  spec.authors       = ['Patrick Read', 'Tim Gentry']
 
-  spec.summary       = %q{Performs a trilateration operation in order to find an unknown point in a Cartesian coordinate system.}
-  spec.description   = %q{Trilateration calculates the position of an unknown point, using the distance from three known points to it.}
+  spec.summary       = %q(Performs a trilateration operation in order to find an unknown point in a Cartesian coordinate system.)
+  spec.description   = %q(Trilateration calculates the position of an unknown point, using the distance from three known points to it.)
   spec.homepage      = 'https://github.com/patrickread/trilateration'
   spec.license       = 'MIT'
 
