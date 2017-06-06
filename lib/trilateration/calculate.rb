@@ -30,7 +30,7 @@ module Trilateration
 
       z = ((dist1 ** 2) - (x ** 2) - (y ** 2)) ** 0.5
 
-      Point.new(x, y, z)
+      Point.new(@point1.x + x, @point1.y + y, @point1.z + z)
     end
 
     # used similarly as calculate_from_distances, except this is a test method
