@@ -1,4 +1,4 @@
-# Trilateration
+# Trilateration [![Build Status](https://travis-ci.org/timgentry/trilateration.svg?branch=master)](https://travis-ci.org/timgentry/trilateration)
 
 Trilateration calculates the position of an unknown point, using the distance from three known points to it.
 
