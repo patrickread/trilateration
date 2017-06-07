@@ -5,7 +5,7 @@ class TrilaterationTest < Minitest::Test
     refute_nil Trilateration::VERSION
   end
 
-  def test_trilateration
+  def test_trilateration_from_test_point
     p1 = Trilateration::Point.new(1, 2)
     p2 = Trilateration::Point.new(8, 6)
     p3 = Trilateration::Point.new(1, 6)
@@ -18,5 +18,35 @@ class TrilaterationTest < Minitest::Test
 
     refute_kind_of(Complex, output.z, "Z Coordinate shouldn't be a Complex")
     assert_equal(1, output.z_rounded, 'Z Coordinate is not correct')
+  end
+
+  def test_readme_example
+    p1 = Trilateration::Point.new(1, 2)
+    p2 = Trilateration::Point.new(8, 6)
+    p3 = Trilateration::Point.new(1, 6)
+    tri = Trilateration::Calculate.new(p1, p2, p3)
+
+    output = tri.calculate_from_distances(4.02305854, 4.43677811, 3.87104637)
+
+    assert_equal(4.25, output.x_rounded, 'X Coordinate is not correct')
+    assert_equal(4.15, output.y_rounded, 'Y Coordinate is not correct')
+
+    refute_kind_of(Complex, output.z, "Z Coordinate shouldn't be a Complex")
+    assert_equal(1, output.z_rounded, 'Z Coordinate is not correct')
+  end
+
+  def test_simple_trilateration
+    p1 = Trilateration::Point.new(3, 3)
+    p2 = Trilateration::Point.new(6, 3)
+    p3 = Trilateration::Point.new(4, 6)
+    tri = Trilateration::Calculate.new(p1, p2, p3)
+
+    output = tri.calculate_from_distances(1, 2, 3)
+
+    assert_equal 4, output.x, 'X Coordinate is not correct'
+    assert_equal 3, output.y, 'Y Coordinate is not correct'
+
+    refute_kind_of(Complex, output.z, "Z Coordinate shouldn't be a Complex")
+    assert_equal 0, output.z, 'Z Coordinate is not correct'
   end
 end
