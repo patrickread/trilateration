@@ -26,7 +26,7 @@ class TrilaterationTest < Minitest::Test
     p3 = Trilateration::Point.new(1, 6)
     tri = Trilateration::Calculate.new(p1, p2, p3)
 
-    output = tri.calculate_from_distances(4.02305854, 4.43677811, 3.87104637)
+    output = tri.calculate_from_distances(4.02305854, 4.29941857, 3.87104637)
 
     assert_equal(4.25, output.x_rounded, 'X Coordinate is not correct')
     assert_equal(4.15, output.y_rounded, 'Y Coordinate is not correct')

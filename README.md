@@ -26,7 +26,7 @@ p2 = Trilateration::Point.new(8,6)
 p3 = Trilateration::Point.new(1,6)
 tri = Trilateration::Calculate.new(p1, p2, p3)
 
-output = tri.calculate_from_distances(4.02305854, 4.43677811, 3.87104637)
+output = tri.calculate_from_distances(4.02305854, 4.29941857, 3.87104637)
 ```
 
 ## Development
