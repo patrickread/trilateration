@@ -54,7 +54,7 @@ module Trilateration
     end
 
     def calculate_dist2(target_point)
-      (((target_point.x - @rel_point2.x) ** 2) + (target_point.y ** 2) + (target_point.z ** 2)) ** 0.5
+      (((target_point.x - @rel_point2.x) ** 2) + ((target_point.y - @rel_point2.y) ** 2) + (target_point.z ** 2)) ** 0.5
     end
 
     def calculate_dist3(target_point)
