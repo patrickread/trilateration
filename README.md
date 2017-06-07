@@ -21,9 +21,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-p1 = Trilateration::Point.new(1,2)
-p2 = Trilateration::Point.new(8,6)
-p3 = Trilateration::Point.new(1,6)
+p1 = Vector[1, 2, 0]
+p2 = Vector[8, 6, 0]
+p3 = Vector[1, 6, 0]
 tri = Trilateration::Calculate.new(p1, p2, p3)
 
 output = tri.calculate_from_distances(4.02305854, 4.29941857, 3.87104637)
