@@ -1,4 +1,4 @@
-# Trilateration [![Build Status](https://travis-ci.org/timgentry/trilateration.svg?branch=master)](https://travis-ci.org/timgentry/trilateration)
+# Trilateration [![Build Status](https://travis-ci.org/patrickread/trilateration.svg?branch=master)](https://travis-ci.org/patrickread/trilateration)
 
 Trilateration calculates the position of an unknown point, using the distance from three known points to it.
 
@@ -37,7 +37,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-1. Fork it ( https://github.com/timgentry/trilateration/fork )
+1. Fork it ( https://github.com/patrickread/trilateration/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
